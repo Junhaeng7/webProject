@@ -1,0 +1,78 @@
+.header-middle {
+  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+  display: flex;
+  min-height: 30px;
+  color: #777;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+  border-bottom: none;
+  margin-bottom: 0.1rem;
+}
+
+.header-middle .container {
+  position: relative;
+  min-height: 30px;
+}
+
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.header-left {
+  display: flex;
+  padding-left: 30px;
+  align-items: left;
+}
+
+.header-right {
+  display: flex;
+  padding-right: 30px;
+  align-items: right;
+}
+
+.header-search-extended {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.header-search-extended {
+  margin-right: 19rem;
+  width: 100%;
+  max-width: 570px;
+  margin-top: 2.2rem;
+  margin-bottom: 2.2rem;
+}
+
+.header-search {
+  position: relative;
+  margin: 0;
+  line-height: 1;
+  padding: 0;
+  border: none;
+}
+
+.header-search-visible .search-toggle {
+  display: none;
+}
+
+.search-toggle {
+  position: relative;
+  display: block;
+  font-size: 2.4rem;
+  line-height: 1;
+  min-width: 2.5rem;
+  padding: 0.3rem 0.2rem;
+  font-weight: 400;
+  color: #333;
+  text-align: center;
+  z-index: 11;
+}
+
+.icon-search {
+  z-index: 5;
+}
