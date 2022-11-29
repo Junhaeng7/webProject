@@ -7,6 +7,7 @@ import Home from "./components/pages/Home";
 // import Services from "./components/pages/Services";
 // import Products from "./components/pages/Products";
 import SignUp from "./components/pages/SignUp";
+import Shopping from "./components/pages/Shopping";
 
 function App() {
   // const [currentForm, setCurrentForm] = useState("SignUp");
@@ -21,7 +22,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-
+          <Route path="/shop" element={<Shopping />} />
           <Route path="/sign-up" element={<SignUp />} />
         </Routes>
       </Router>
