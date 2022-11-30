@@ -1,3 +1,16 @@
+.controlMenu {
+    margin: 10px;
+}
+
 .itemList {
+    margin: 10px;
     display: flex;
+    flex-wrap: wrap;
+}
+
+.Items {
+    margin: 10px;
+}
+.name {
+ 
 }
