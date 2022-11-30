@@ -8,6 +8,7 @@ import Home from "./components/pages/Home";
 // import Products from "./components/pages/Products";
 import SignUp from "./components/pages/SignUp";
 import Shopping from "./components/pages/Shopping";
+import Cart from "./components/pages/Cart";
 
 function App() {
   // const [currentForm, setCurrentForm] = useState("SignUp");
@@ -19,22 +20,43 @@ function App() {
     {
       id:1,
       name: "Jeans",
-      price: 2000,
+      price: 120,
+      type: "bottom"
     },
     {
       id:2,
       name: "Jacket",
-      price: 5000
+      price: 99,
+      type: "top"
     },
     {
       id:3,
       name: "macbook",
-      price: 1599
+      price: 1599,
+      type: "other"
     },
     {
       id:4,
       name: "shoes",
-      price: 1000
+      price: 100,
+      type: "shoes"
+    },
+    {
+      id:5,
+      name: "T-shirt",
+      price: 10,
+      type: "top"
+    },{
+      id:6,
+      name: "shorts",
+      price: 50,
+      type: "bottom"
+    },
+    {
+      id:7,
+      name: "crocs",
+      price: 45,
+      type: "shoes"
     }
   ]
 
@@ -49,7 +71,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shopping itemList = {itemList}/>} />
           <Route path="/sign-up" element={<SignUp />} />
-          
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </Router>
     </>

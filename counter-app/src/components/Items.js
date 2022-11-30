@@ -12,11 +12,11 @@ const Items= ({id,name,price}) => {
   return (
     <div className='Items'>
         <div onClick={()=>navigate(`/shop/${id}`)}>
-            <img style={{ width: 300, height: 300 }} src = {process.env.PUBLIC_URL + `images/item${id}.jpeg`} alt="itemImage"/>
+            <img style={{ width: 250, height: 250 }} src = {process.env.PUBLIC_URL + `images/item${id}.jpeg`} alt="itemImage"/>
         </div>
         <div onClick={()=>navigate(`/shop/${id}`)}>
-            <div>{name}</div>
-            <div>${price}</div>
+            <div className='name'>{name}</div>
+            <div className='price'>${price}</div>
         </div>
         <button>Add to cart</button>
     </div>
