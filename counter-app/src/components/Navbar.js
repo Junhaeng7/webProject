@@ -50,18 +50,19 @@ function Navbar() {
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
-
           <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li></li>
-            {button && (
-              <Button buttonStyle="btn--outline" iscart={false}>
-                Login In
-              </Button>
-            )}
+            <li>
+              <Link
+                to="/sign-up"
+                className="nav-links-mobile"
+                onClick={closeMobileMenu}
+              >
+                Sign Up
+              </Link>
+            </li>
+            {button && <Button buttonStyle="btn--outline">Login In</Button>}
           </ul>
-
           <Button
-            iscart={true}
             buttonStyle="btn--outline"
             style={{ width: "3rem", height: "3rem" }}
             //   variant="outline-primary"
