@@ -8,6 +8,31 @@ const Items= ({id,name,price}) => {
   const env = process.env;
   env.PUBLIC_URL = env.PUBLIC_URL || ""
        
+  const addCart = () => {
+    let localCart = JSON.parse(localStorage.getItem("cartItems"))
+    let info = {id,name,price,quantity:1};
+    if(localCart) {
+      if(localCart.find((it)=> parseInt(it.id) === parseInt(id))){
+        localCart = localCart.map((it)=> {
+        if(parseInt(it.id) === parseInt(id)){
+          return {
+            id,name,price,quantity: it.quantity +1
+          }
+        }else{
+          return it
+        }
+        })
+        localStorage.setItem("cartItems", JSON.stringify([...localCart]));
+      }else{
+        localStorage.setItem("cartItems", JSON.stringify([info,...localCart]));
+      }
+    }else{
+      localStorage.setItem("cartItems", JSON.stringify([info]));
+    }
+    
+    navigate("/cart")
+  }
+
   return (
     <div className='Items'>
       <div onClick={()=>navigate(`/shop/${id}`)}>
@@ -17,7 +42,7 @@ const Items= ({id,name,price}) => {
           <div className='name'>{name}</div>
           <div className='price'>${price}</div>
       </div>
-      <button onClick={()=>navigate("/cart")}>Add to cart</button>
+      <button onClick={addCart}>Add to cart</button>
     </div>
   )
 }

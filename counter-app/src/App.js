@@ -57,7 +57,8 @@ function App() {
       name: "crocs",
       price: 45,
       type: "shoes"
-    }
+    },
+
   ]
 
   const cartList = [

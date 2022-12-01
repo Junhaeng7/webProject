@@ -11,6 +11,6 @@
 .Items {
     margin: 10px;
 }
-.name {
- 
+.cartItem {
+    display: flex;
 }
