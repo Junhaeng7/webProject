@@ -13,7 +13,7 @@ import Shopping from "./components/pages/Shopping";
 import Cart from "./components/pages/Cart";
 
 function App() {
-  const [currentForm, setCurrentForm] = useState("SignUp");
+  const [currentForm, setCurrentForm] = useState("login");
 
   const toggleForm = (forName) => {
     setCurrentForm(forName);
@@ -116,7 +116,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shopping itemList={itemList} />} />
           <Route path="/sign-up" element={<SignUp />} />
-          {/* {currentForm === "SignUp" ? (
+          {/* {currentForm === "login" ? (
             <SignUp onFormSwitch={toggleForm} />
           ) : (
             <Register onFormSwitch={toggleForm} />
